@@ -1,0 +1,16 @@
+<template name="layout">
+	<h1>Welcome to the Aquarium!</h1>
+
+	 <div class="container">
+<!--  		<header class="navbar navbar-default" role="navigation">
+ 			<div class="navbar-header">
+ 				<a class="navbar-brand" href="/">Home Aquarium!</a>
+ 			</div>
+ 		</header> -->
+ 		{{> header}}
+	<div id="main">
+		<!-- store x y coordinates of fish here -->
+ 		{{> yield}}
+ 	</div>
+ </div>
+</template>

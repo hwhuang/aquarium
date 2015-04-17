@@ -1,0 +1,13 @@
+<template name="aquariumPage">
+  <div class="aquarium-page page">
+    {{> aquariumItem}}
+    <div class="fish page">
+    {{#each fish}}
+      {{> fishItem}}
+    {{/each}}
+  	<!-- {{print}} -->
+  	</div>
+  </div>
+</template>
+
+<!-- This is what is on the page of the aquarium -->

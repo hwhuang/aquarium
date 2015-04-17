@@ -1,0 +1,5 @@
+1.  Make a sign in that will create a fish for you with userName and imageUrl
+
+	Right now, can always move a fish. 
+
+	
