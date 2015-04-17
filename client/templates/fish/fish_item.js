@@ -1,12 +1,7 @@
-Template.fishItem.helpers({
-});
-		  
-
+//Moves the fish on arrow keys
 $(document).on('keyup', function (event) {
 	if(event.keyCode == '37'){
-		//fish = Fish.findOne({id: 'Hannah'});
-  		Fish.update(Fish.findOne()._id, {$inc: {left: -10}});
-  		// Fish.update(Fish.find({user: 'Hannah', _id: {aquariumId}}), {$inc: {left: -10}});
+  	Fish.update(Fish.findOne()._id, {$inc: {left: -10}});
 	}
 	if(event.keyCode == '39') {
 		Fish.update(Fish.findOne()._id, {$inc: {left: 10}}); 
@@ -18,12 +13,5 @@ $(document).on('keyup', function (event) {
 		Fish.update(Fish.findOne()._id, {$inc: {top: 10}}); 
 	}
 })
-
-//jquery
-
-//can't use findOne anymore after...
-
-
-
 
 

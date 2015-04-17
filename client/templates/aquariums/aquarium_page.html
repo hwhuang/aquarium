@@ -1,13 +1,12 @@
+<!-- This is what is displayed on Each Aquarium Page-->
 <template name="aquariumPage">
-  <div class="aquarium-page page">
+	<div class="aquarium-page page">
     {{> aquariumItem}}
     <div class="fish page">
-    {{#each fish}}
-      {{> fishItem}}
-    {{/each}}
-  	<!-- {{print}} -->
+    	{{#each fish}}
+      	{{> fishItem}}
+    	{{/each}}
   	</div>
   </div>
 </template>
 
-<!-- This is what is on the page of the aquarium -->
