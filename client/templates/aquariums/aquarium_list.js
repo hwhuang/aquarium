@@ -1,7 +1,5 @@
 Template.aquariumsList.helpers({
-	aquariums: function () {
- 		return Aquariums.find();
-	}
+  aquariums: function() {
+    return Aquariums.find();
+  }
 });
-
-
