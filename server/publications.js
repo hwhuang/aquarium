@@ -9,19 +9,16 @@ Meteor.publish('aquarium', function(aquariumId) {
 
 Meteor.publish('fish', function(aquariumId) {
   check(aquariumId, String);
-  //verifies if there is a fish, otherwise returns one
-  // console.log("This", this);
- //  if(this.userId && this.has_fish) {
- //     // return Fish.find({aquariumId: aquariumId});
-  // }  
-  
-  // Fish.insert({
-  //  userName: 'Bob',
-  //  imageUrl: 'http://pngimg.com/upload/fish_PNG1156.png',
-  //  top: 50,
-  //  left: 100,
-  //  aquariumId: aquariumId2
-  //  })
-  // this.has_fish = true;
-    return Fish.find({aquariumId: aquariumId});
+  if (this.userId) {
+    if (!Fish.findOne({aquariumId: aquariumId, userId: this.userId})) {
+      Fish.insert({
+        userId: this.userId,
+        imageUrl: 'http://pngimg.com/upload/fish_PNG1156.png',
+        top: 50,
+        left: 100,
+        aquariumId: aquariumId
+      });
+    }
+  }
+  return Fish.find({aquariumId: aquariumId});
 });
